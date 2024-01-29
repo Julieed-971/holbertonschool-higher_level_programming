@@ -40,29 +40,31 @@ Learning about Python data structures: Lists, tuples.
 
 ## Mandatory Tasks
 
-### Task 1. Print a list of integers 
+### Task 0. Print a list of integers 
 
-### Task 2. Secure access to an element in a list 
+### Task 1. Secure access to an element in a list 
 
-### Task 3. Replace element 
+### Task 2. Replace element 
 
-### Task 4. Print a list of integers... in reverse! 
+### Task 3. Print a list of integers... in reverse! 
 
-### Task 5. Replace in a copy
+### Task 4. Replace in a copy
 
-### Task 6. Can you C me now? 
+### Task 5. Can you C me now? 
 
-### Task 7. Lists of lists = Matrix
+### Task 6. Lists of lists = Matrix
 
-## Task 8. Tuples addition
+## Task 7. Tuples addition
 
-## Task 9. More returns! 
+## Task 8. More returns! 
 
-## Task 10. Find the max 
+## Task 9. Find the max 
 
-## Task 11. Only by 2 
+## Task 10. Only by 2 
 
-## Task 12. Delete at 
+## Task 11. Delete at 
+
+## Task 12. Switch
 
 ## Authors
 
