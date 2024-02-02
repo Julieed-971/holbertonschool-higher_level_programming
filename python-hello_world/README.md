@@ -49,7 +49,7 @@ Learning about Python scripting and print function.
 
 ### Task 6. Create a new sentence
 
-## Task 7. Easter Egg
+### Task 7. Easter Egg
 
 ## Authors
 
