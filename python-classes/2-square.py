@@ -4,7 +4,6 @@
 
 class Square:
     """This is an empty class that defines a square."""
-    pass
 
     def __init__(self, size=0):
         """Initialize the size and check if size is an integer
@@ -12,7 +11,7 @@ class Square:
         Parameters
         ----------
         size : int, optional
-        Size of the square, optional
+            Size of the square, optional
         Default=0
 
         Raises
