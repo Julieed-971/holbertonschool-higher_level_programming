@@ -59,13 +59,13 @@ class Square:
             Square of size
         """
         return self.__size**2
-    
+
     def my_print(self):
         """Prints a square pattern with '#'"""
-        
+
         if self.__size != 0:
             for i in range(self.__size):
                 for j in range(self.__size):
                     print("#", end="")
                 print()
-        print()        
+        print()
