@@ -7,13 +7,17 @@ class Square:
     pass
 
     def __init__(self, size=0, position=(0, 0)):
-        """Initialize the size
+        """Initialize the square size and position
 
         Parameters
         ----------
         size : int, optional
             Size of the square, optional
         Default=0
+
+        position : tuple, optional
+            Position of the square
+        Default=0, 0
         """
         self.__position = position
         self.__size = size
@@ -78,7 +82,7 @@ class Square:
 
         if not type(value) is tuple or value[0] < 0 or value[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
-        self.position = value
+        self.__position = value
 
     def area(self):
         """Calculate the area of a square
