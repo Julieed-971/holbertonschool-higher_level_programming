@@ -19,8 +19,8 @@ class Square:
             Position of the square
         Default=0, 0
         """
-        self.__position = position
-        self.__size = size
+        self.position = position
+        self.size = size
 
     @property
     def size(self):
