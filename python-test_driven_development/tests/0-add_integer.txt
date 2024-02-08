@@ -21,6 +21,9 @@ Using ``add``
 >>> add_integer(-2, 100.3)
 98
 
+>>> add_integer(2.5, 3.5)
+6
+
 >>> add_integer(4, "School")
 Traceback (most recent call last):
 TypeError: b must be an integer
