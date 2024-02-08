@@ -33,3 +33,7 @@ TypeError: a must be an integer
 >>> add_integer(100.3, -2, 5)
 Traceback (most recent call last):
 TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+>>> add_integer()
+Traceback (most recent call last):
+TypeError: add_integer() missing 1 required positional argument: 'a'
