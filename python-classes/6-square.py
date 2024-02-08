@@ -18,6 +18,7 @@ class Square:
             Position of the square
         Default=0, 0
         """
+
         self.position = position
         self.size = size
 
@@ -48,7 +49,7 @@ class Square:
             If size is strictly inferior to zero
 
         """
-        if not type(value) is int:
+        if type(value) is not int:
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
@@ -81,7 +82,8 @@ class Square:
 
         if type(value) is not tuple:
             raise TypeError("position must be a tuple of 2 positive integers")
-        if type(value[:]) is not int or value[0] < 0 or value[1] < 0:
+        if type(value[0]) is not int or \
+                type(value[1]) is not int or value[0] < 0 or value[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
@@ -96,15 +98,9 @@ class Square:
 
     def my_print(self):
         """Prints a square pattern with '#'"""
-
-        if self.__position[1] > 0:
-            print()
-            for _ in range(self.__size):
-                print(" "*self.__position[0]+"#"*self.__size, end="")
-                print()
-        elif self.__position[1] <= 0:
-            for _ in range(self.__size):
-                print(" "*self.__position[0]+"#"*self.__size, end="")
-                print()
         if self.__size == 0:
             print()
+        for _ in range(self.__position[1]):
+            print()
+        for _ in range(self.__size):
+            print(" "*self.__position[0]+"#"*self.__size)
