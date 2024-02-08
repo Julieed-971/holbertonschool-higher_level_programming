@@ -1,9 +1,5 @@
 #!/usr/bin/python3
-'''Trying to figure out unittest
-
-
-
-'''
+'''Trying to figure out unittest'''
 
 
 def add_integer(a, b=98):
