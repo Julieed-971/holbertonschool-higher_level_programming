@@ -4,7 +4,6 @@
 
 class Square:
     """This is an empty class that defines a square."""
-    pass
 
     def __init__(self, size=0, position=(0, 0)):
         """Initialize the square size and position
@@ -80,9 +79,9 @@ class Square:
             If the position is not a tuple of two integers
         """
 
-        if not type(value) is tuple:
+        if type(value) is not tuple:
             raise TypeError("position must be a tuple of 2 positive integers")
-        if value[0] < 0 or value[1] < 0:
+        if type(value[:]) is not int or value[0] < 0 or value[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
