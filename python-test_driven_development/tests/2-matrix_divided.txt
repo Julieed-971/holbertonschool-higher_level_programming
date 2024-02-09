@@ -1,0 +1,62 @@
+The ``matrix_divided`` test module
+===========================
+
+Using ``divided``
+------------
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Correct matrix:
+
+>>> matrix_1 = [[1, 2, 3], [4, 5, 6]]
+>>> matrix_2 = [[2.44, 6.22, 8.2], [56.4, 88.0, 46.22]]
+
+Incorrect matrix:
+
+>>> matrix_a = [['abc', 24], [48, 36]]
+>>> matrix_b = [[2.44, 6.22, 8.2], [56.4, 88.0, 46.22, 62.98]]
+>>> empty_matrix = []
+>>> empty_list_matrix = [[]]
+
+Correct tests:
+
+>>> matrix_divided(matrix_1, 3)
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+>>> matrix_divided(matrix_2, 2)
+[[1.22, 3.11, 4.1], [28.2, 44.0, 23.11]]
+
+
+Failed tests:
+
+>>> matrix_divided(matrix_a, 12)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix_divided(matrix_b, 2)
+Traceback (most recent call last):
+TypeError: Each row of the matrix must have the same size
+
+>>> matrix_divided(matrix_1, 'abc')
+Traceback (most recent call last):
+TypeError: div must be a number
+
+>>> matrix_divided(matrix_1, 0)
+Traceback (most recent call last):
+ZeroDivisionError: division by zero
+
+>>> matrix_divided(empty_matrix, 1)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix_divided(empty_list_matrix, 1)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix_divided()
+Traceback (most recent call last):
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+>>> matrix_divided(matrix_1)
+Traceback (most recent call last):
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
