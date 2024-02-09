@@ -5,22 +5,22 @@
 def print_square(size):
     '''
     Function that prints a square with the character #
-    
+
     Parameters
     ----------
     size: int
         size of the square
-    
+
     Raises
      ------
     TypeError
         If size is not an integer or less than zero
     ValueError
         If size is less than zero
-    
+
     Returns
     -------
-    None	
+    None
     '''
 
     if not isinstance(size, int):
@@ -31,4 +31,3 @@ def print_square(size):
         raise TypeError("size must be an integer")
     for x in range(size):
         print("#" * size)
- 
