@@ -1,0 +1,38 @@
+The ``print_square`` test module
+================================
+
+Using ``print_square``
+----------------------
+
+>>> print_square = __import__('4-print_square').print_square
+
+Correct tests:
+
+>>> print_square(4)
+####
+####
+####
+####
+
+>>> print_square(10)
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+
+>>> print_square(0)
+
+
+>>> print_square(1)
+#
+
+>>> print_square(-1)
+Traceback (most recent call last):
+ValueError: size must be >= 0
+
