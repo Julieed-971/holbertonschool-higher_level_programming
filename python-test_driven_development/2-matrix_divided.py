@@ -15,7 +15,13 @@ def matrix_divided(matrix, div):
 
     Raises
     ------
-
+    TypeError
+        If matrix is not of type list
+        If matrix element are different size
+        If element of matrix are not int or float
+        If div is not a number
+    ZeroDivisionError
+        If div is zero
     Returns
     -------
     new_matrix
