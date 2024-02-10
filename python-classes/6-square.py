@@ -69,7 +69,7 @@ class Square:
     def position(self, value):
         """Set the position of a square
 
-          Parameters
+        Parameters
         ----------
         value : tuple
             Position of the square
