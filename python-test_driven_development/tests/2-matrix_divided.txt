@@ -15,6 +15,7 @@ Incorrect matrix:
 
 >>> matrix_a = [['abc', 24], [48, 36]]
 >>> matrix_b = [[2.44, 6.22, 8.2], [56.4, 88.0, 46.22, 62.98]]
+>>> matrix_c = [(1, 2, 3), (4, 5, 6)]
 >>> empty_matrix = []
 >>> empty_list_matrix = [[]]
 
@@ -30,6 +31,10 @@ Correct tests:
 Failed tests:
 
 >>> matrix_divided(matrix_a, 12)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix_divided(matrix_c, 12)
 Traceback (most recent call last):
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
