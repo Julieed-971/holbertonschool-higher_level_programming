@@ -10,6 +10,7 @@ Correct matrix:
 
 >>> matrix_1 = [[1, 2, 3], [4, 5, 6]]
 >>> matrix_2 = [[2.44, 6.22, 8.2], [56.4, 88.0, 46.22]]
+>>> matrix_3 = [[1, 2, 3], [-4, -5, -6]]
 
 Incorrect matrix:
 
@@ -30,6 +31,8 @@ Correct tests:
 >>> matrix_divided(matrix_1, -5)
 [[-0.2, -0.4, -0.6], [-0.8, -1.0, -1.2]]
 
+>>> matrix_divided(matrix_3, -5)
+[[-0.2, -0.4, -0.6], [0.8, 1.0, 1.2]]
 
 Failed tests:
 
