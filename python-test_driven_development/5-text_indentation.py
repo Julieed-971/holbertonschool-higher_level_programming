@@ -25,6 +25,9 @@ def text_indentation(text):
 
     if not isinstance(text, str):
         raise TypeError("text must be a string")
+    if len(text) == 0:
+        raise TypeError("text_indentation() missing \
+            1 required positional argument: 'text'")
 
     i = 0
     text_list = []
