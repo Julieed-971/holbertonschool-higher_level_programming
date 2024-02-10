@@ -12,7 +12,7 @@ def print_square(size):
         size of the square
 
     Raises
-     ------
+    ------
     TypeError
         If size is not an integer or less than zero
     ValueError
