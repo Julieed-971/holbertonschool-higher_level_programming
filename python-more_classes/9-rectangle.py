@@ -143,6 +143,5 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        size == Rectangle.width == Rectangle.height
-        new_rect = cls(size, size)
-        return new_rect
+        size == cls.width == cls.height
+        return cls(size, size)
