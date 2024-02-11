@@ -8,10 +8,6 @@ class Rectangle:
     print_symbol = "#"
     size = 0
 
-    @classmethod
-    def square(cls, size=0):
-        return cls(size, size)
-
     def __init__(self, width=0, height=0):
         """Initialize the rectangle width and height
 
@@ -145,3 +141,7 @@ class Rectangle:
         if rect_1.area() >= rect_2.area():
             return rect_1
         return rect_2
+
+    @classmethod
+    def square(cls, size=0):
+        return cls(size, size)
