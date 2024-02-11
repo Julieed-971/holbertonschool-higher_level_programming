@@ -5,7 +5,7 @@
 class Rectangle:
     """This is an empty class that defines a rectangle."""
     number_of_instances = 0
-    print_symbol = '#'
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """Initialize the rectangle width and height
@@ -23,7 +23,7 @@ class Rectangle:
         self.height = height
         self.width = width
         Rectangle.number_of_instances += 1
-        Rectangle.print_symbol = '#'
+        Rectangle.print_symbol = self.print_symbol
 
     @property
     def width(self):
