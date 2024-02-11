@@ -22,7 +22,6 @@ class Rectangle:
         self.height = height
         self.width = width
 
-
     @property
     def width(self):
         '''Get the width of a rectangle
@@ -118,6 +117,6 @@ class Rectangle:
         for i in range(self.__height):
             for j in range(self.__width):
                 rectangle_str += "#"
-            if i != self.__height -1:
+            if i != self.__height - 1:
                 rectangle_str += "\n"
         return rectangle_str
