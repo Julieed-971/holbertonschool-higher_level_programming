@@ -6,6 +6,7 @@ class Rectangle:
     """This is an empty class that defines a rectangle."""
     number_of_instances = 0
     print_symbol = "#"
+    size = 0
 
     @classmethod
     def square(cls, size=0):
