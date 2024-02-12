@@ -1,4 +1,4 @@
-# <p align="center">Python - Evcerything is Object</p>
+# <p align="center">Python - Everything is Object</p>
 
 ## Table of Contents
 
