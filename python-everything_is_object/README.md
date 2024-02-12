@@ -48,22 +48,21 @@ Digging deeper about Python Classes and Objects.
 - No Shebang on the first line (i.e. “#!/usr/bin/python3”)
 - All your files should end with a new line
 
-
 ## Mandatory Tasks
 
-### Task 0. Who am I? 
+### Task 0. Who am I?
 
-### Task 1. Where are you? 
+### Task 1. Where are you?
 
-### Task 2. Right count 
+### Task 2. Right count
 
-### Task 3. Right count = 
+### Task 3. Right count =
 
-### Task 4. Right count = 
+### Task 4. Right count =
 
 ### Task 5. Right count =+
 
-- ### Task 6. Is equal
+### Task 6. Is equal
 
 ### Task 7. Is the same
 
@@ -111,22 +110,22 @@ Digging deeper about Python Classes and Objects.
 
 ### Task 29. Python3: Mutable, Immutable... everything is object!
 
-	Write a blog post about everything you just learned / this project is covering. Your blog post should be articulated this way (one paragraph per item):
+Write a blog post about everything you just learned / this project is covering. Your blog post should be articulated this way (one paragraph per item):
 
-		introduction
-		id and type
-		mutable objects
-		immutable objects
-		why does it matter and how differently does Python treat mutable and immutable objects
-		how arguments are passed to functions and what does that imply for mutable and immutable objects
+	introduction
+	id and type
+	mutable objects
+	immutable objects
+	why does it matter and how differently does Python treat mutable and immutable objects
+	how arguments are passed to functions and what does that imply for mutable and immutable objects
 
-	If you worked on advanced tasks, please also include what you did learn in those tasks in the blog post.
+If you worked on advanced tasks, please also include what you did learn in those tasks in the blog post.
 
-	Your posts should have many code/output examples to illustrate what you are explaining, and at least one picture, at the top. Publish your blog post on Medium or LinkedIn, and share it at least on LinkedIn.
+Your posts should have many code/output examples to illustrate what you are explaining, and at least one picture, at the top. Publish your blog post on Medium or LinkedIn, and share it at least on LinkedIn.
 
-	When done, please add all urls below (blog post, LinkedIn post, etc.)
+When done, please add all urls below (blog post, LinkedIn post, etc.)
 
-	Please, remember that these blogs must be written in English to further your technical ability in a variety of settings.
+Please, remember that these blogs must be written in English to further your technical ability in a variety of settings.
 
 ## Author
 
