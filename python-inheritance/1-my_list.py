@@ -4,7 +4,7 @@
 
 class MyList(list):
     """Empty class."""
-    
+
     pass
 
     def print_sorted(self):
