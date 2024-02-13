@@ -54,3 +54,15 @@ Correct tests:
 [(2, 6), (8, 5), (36, 65), (-12, 45), (72, -200)]
 [(-12, 45), (2, 6), (8, 5), (36, 65), (72, -200)]
 [(2, 6), (8, 5), (36, 65), (-12, 45), (72, -200)]
+
+
+Incorrect tests
+
+>>> my_list = MyList()
+... my_list = {1, 5, 8, 4}
+... print(my_list)
+... my_list.print_sorted()
+... print(my_list)
+{8, 1, 4, 5}
+Traceback (most recent call last):
+AttributeError: 'set' object has no attribute 'print_sorted'
