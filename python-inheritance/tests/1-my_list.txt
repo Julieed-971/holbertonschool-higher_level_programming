@@ -1,7 +1,7 @@
 The ``MyList`` test module
 ==========================
 
-Using ``MyList``
+Using ``print_sorted``
 ----------------
 
 >>> MyList = __import__('1-my_list').MyList
@@ -9,50 +9,56 @@ Using ``MyList``
 Correct tests:
 
 >>> my_list = MyList()
-... my_list.append(1)
-... my_list.append(4)
-... my_list.append(2)
-... my_list.append(3)
-... my_list.append(5)
-... print(my_list)
-... my_list.print_sorted()
-... print(my_list)
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> print(my_list)
+>>> my_list.print_sorted()
+>>> print(my_list)
 [1, 4, 2, 3, 5]
 [1, 2, 3, 4, 5]
 [1, 4, 2, 3, 5]
 
 >>> my_list = MyList()
-... print(my_list)
-... my_list.print_sorted()
-... print(my_list)
+>>> print(my_list)
+>>> my_list.print_sorted()
+>>> print(my_list)
 []
 []
 []
 
 
 >>> my_list = MyList()
-... my_list.append((2, 6))
-... my_list.append((8, 5))
-... my_list.append((36, 65))
-... my_list.append((-12, 45))
-... my_list.append((72, -200))
-... print(my_list)
-... my_list.print_sorted()
-... print(my_list)
+>>> my_list.append((2, 6))
+>>> my_list.append((8, 5))
+>>> my_list.append((36, 65))
+>>> my_list.append((-12, 45))
+>>> my_list.append((72, -200))
+>>> print(my_list)
+>>> my_list.print_sorted()
+>>> print(my_list)
 [(2, 6), (8, 5), (36, 65), (-12, 45), (72, -200)]
 [(-12, 45), (2, 6), (8, 5), (36, 65), (72, -200)]
 [(2, 6), (8, 5), (36, 65), (-12, 45), (72, -200)]
 
 >>> my_list = MyList()
-... my_list.append((2.5, 6))
-... my_list.append((8.6, 5))
-... my_list.append((36.3, 65))
-... my_list.append((-12, 45))
-... my_list.append((72, -200))
-... print(my_list)
-... my_list.print_sorted()
-... print(my_list)
+>>> my_list.append((2.5, 6))
+>>> my_list.append((8.6, 5))
+>>> my_list.append((36.3, 65))
+>>> my_list.append((-12, 45))
+>>> my_list.append((72, -200))
+>>> print(my_list)
+>>> my_list.print_sorted()
+>>> print(my_list)
 [2.5, 8.6, 36.3, 3, 5]
 [2.5, 3, 5, 8.6, 36.3]
 [2.5, 8.6, 36.3, 3, 5]
+
+>>> my_list = MyList([1, 2, -1])
+>>> print(my_list)
+>>> my_list.print_sorted()
+>>> print(my_list)
+
 Incorrect Correct
