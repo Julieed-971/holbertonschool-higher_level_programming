@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""MyList Class."""
+"""Create a MyList Class."""
 
 
 class MyList(list):
