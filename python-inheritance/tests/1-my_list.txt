@@ -60,6 +60,9 @@ Correct tests:
 >>> print(my_list)
 >>> my_list.print_sorted()
 >>> print(my_list)
+[1, 2, -1]
+[-1, 1, 2]
+[1, 2, -1]
 
 Incorrect tests
 
