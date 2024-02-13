@@ -4,6 +4,6 @@
 
 def is_same_class(obj, a_class):
     """Returns True if object is exactly an instance of the specified class"""
-    if isinstance(obj, a_class):
+    if isinstance(obj, a_class) and a_class != object:
         return True
     return False
