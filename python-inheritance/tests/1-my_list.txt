@@ -43,3 +43,16 @@ Correct tests:
 [(-12, 45), (2, 6), (8, 5), (36, 65), (72, -200)]
 [(2, 6), (8, 5), (36, 65), (-12, 45), (72, -200)]
 
+>>> my_list = MyList()
+... my_list.append((2.5, 6))
+... my_list.append((8.6, 5))
+... my_list.append((36.3, 65))
+... my_list.append((-12, 45))
+... my_list.append((72, -200))
+... print(my_list)
+... my_list.print_sorted()
+... print(my_list)
+[2.5, 8.6, 36.3, 3, 5]
+[2.5, 3, 5, 8.6, 36.3]
+[2.5, 8.6, 36.3, 3, 5]
+Incorrect Correct
