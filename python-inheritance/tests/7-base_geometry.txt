@@ -47,7 +47,7 @@ TypeError: age must be an integer
 
 >>> bg.integer_validator("age", )
 Traceback (most recent call last):
-TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+TypeError: integer_validator() missing 1 required positional argument: 'value'
 
 >>> bg.integer_validator(, 5.6)
 Traceback (most recent call last):
@@ -55,7 +55,7 @@ SyntaxError: invalid syntax
 
 >>> bg.integer_validator()
 Traceback (most recent call last):
-TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
 >>> bg.integer_validator("age", None)
 Traceback (most recent call last):
@@ -65,7 +65,7 @@ TypeError: age must be an integer
 
 >>> bg.integer_validator("HSBC", 56, 89)
 Traceback (most recent call last):
-TypeError: BaseGeometry.integer_validator() takes 3 positional arguments but 4 were given
+TypeError: integer_validator() takes 3 positional arguments but 4 were given
 
 >>> bg.integer_validator(75, "John")
 Traceback (most recent call last):
