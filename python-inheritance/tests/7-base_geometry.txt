@@ -45,3 +45,11 @@ TypeError: age must be an integer
 >>> bg.integer_validator("HSBC", 56, 89)
 Traceback (most recent call last):
 TypeError: BaseGeometry.integer_validator() takes 3 positional arguments but 4 were given
+
+>>> bg.integer_validator(75, "John")
+Traceback (most recent call last):
+TypeError: 75 must be an integer
+
+>>> bg.area()
+Traceback (most recent call last):
+Exception: area() is not implemented
