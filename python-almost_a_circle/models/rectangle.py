@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Rectangle that inherits from Base"""
 from models.base import Base
+import json
 
 
 class Rectangle(Base):
@@ -131,3 +132,8 @@ class Rectangle(Base):
             self.__x = kwargs['x']
         if 'y' in kwargs:
             self.__y = kwargs['y']
+
+    def to_dictionary(self):
+        """Return a dictionnary representation of a rectangle"""
+        return {'x': self.__x, 'y': self.__y, 'id': self.id,
+                'height': self.__height, 'width': self.__width}
