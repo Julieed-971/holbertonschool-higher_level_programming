@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Rectangle that inherits from Base"""
 from models.base import Base
-import json
 
 
 class Rectangle(Base):
