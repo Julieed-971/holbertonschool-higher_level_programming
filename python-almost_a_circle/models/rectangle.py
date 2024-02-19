@@ -93,7 +93,10 @@ class Rectangle(Base):
 
     def display(self):
         """Prints a rectangle pattern with '#'"""
+        for _ in range(self.__y):
+            print()
         for _ in range(self.__height):
+            print(" "*self.x, end="")
             for _ in range(self.__width):
                 print("#", end="")
             print()
