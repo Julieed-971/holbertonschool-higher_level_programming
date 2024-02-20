@@ -2,6 +2,10 @@
 """Unittest for Almost a circle project"""
 
 import unittest
+import json
+import sys
+import os
+
 from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
@@ -9,15 +13,15 @@ from models.square import Square
 
 class TestRectangle(unittest.TestCase):
     """Unittest for Rectangle class"""
-
-    def test_args(self):
+    def test_init(self):
         rectangle = Rectangle(1, 2)
         self.assertEqual(rectangle.width, 1)
         self.assertEqual(rectangle.height, 2)
     
     def test_types(self):
         """Test the type of arguments passed to the class""" 
-        self.assertRaises(TypeError, Rectangle, ("1", 2))
+        with self.assertRaises(TypeError):
+            Rectangle("1", 2)
 
 # Test of Rectangle("1", 2) exists
 
