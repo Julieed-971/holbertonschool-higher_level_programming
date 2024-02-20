@@ -12,3 +12,9 @@ class TestBase(unittest.TestCase):
         
         # Check if instance has an ID attribute
         self.assertTrue(hasattr(base, 'id'))
+
+        # Check if ID is an integer
+        self.assertIsInstance(base.id, int)
+        
+        # Check if ID is greater than or equal to 1
+        self.assertGreaterEqual(base.id, 1)
