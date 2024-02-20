@@ -51,17 +51,13 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(ValueError):
             Rectangle(1, 2, 3, -4)
 
-# Test of Rectangle(-1, 2) exists
+    def test_area(self):
+        rectangle = Rectangle(3, 4)
+        self.assertEqual(rectangle.area(), 12)
 
-# Test of Rectangle(1, -2) exists
-
-# Test of Rectangle(0, 2) exists
-
-# Test of Rectangle(1, 0) exists
-
-# Test of Rectangle(1, 2, -3) exists
-
-# Test of Rectangle(1, 2, 3, -4) exists
+    def test_string_representation(self):
+        rectangle = Rectangle(3, 4, 1, 2, 5)
+        self.assertEqual(str(rectangle), "[Rectangle] (5) 1/2 - 3/4")
 
 # Test of area() exists
 
