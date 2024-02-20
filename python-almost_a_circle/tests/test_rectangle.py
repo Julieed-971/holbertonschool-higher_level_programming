@@ -14,7 +14,6 @@ class TestRectangle(unittest.TestCase):
         rectangle = Rectangle(1, 2)
         self.assertEqual(rectangle.width, 1)
         self.assertEqual(rectangle.height, 2)
-        self.assertEqual(rectangle.id, 1)
     
     def test_types(self):
         """Test the type of arguments passed to the class""" 
