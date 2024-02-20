@@ -17,12 +17,7 @@ class TestRectangle(unittest.TestCase):
     
     def test_types(self):
         """Test the type of arguments passed to the class""" 
-
-# Test of Rectangle(1, 2) exists
-
-# Test of Rectangle(1, 2, 3) exists
-
-# Test of Rectangle(1, 2, 3, 4) exists
+        self.assertRaises(TypeError, Rectangle, ("1", 2))
 
 # Test of Rectangle("1", 2) exists
 
