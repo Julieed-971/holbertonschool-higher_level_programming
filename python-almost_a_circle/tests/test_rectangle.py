@@ -17,13 +17,24 @@ class TestRectangle(unittest.TestCase):
         rectangle = Rectangle(1, 2)
         self.assertEqual(rectangle.width, 1)
         self.assertEqual(rectangle.height, 2)
-    
+        
+        rectangle1 = Rectangle(1, 2, 3, 4, 5)
+        self.assertEqual(rectangle1.width, 1)
+        self.assertEqual(rectangle1.height, 2)
+        self.assertEqual(rectangle1.x, 3)
+        self.assertEqual(rectangle1.y, 4)
+        self.assertEqual(rectangle1.id, 5)
+        
     def test_types(self):
         """Test the type of arguments passed to the class""" 
         with self.assertRaises(TypeError):
             Rectangle("1", 2)
         with self.assertRaises(TypeError):
             Rectangle(1, "2")
+        with self.assertRaises(TypeError):
+            Rectangle(1, 2, "3")
+        with self.assertRaises(TypeError):
+            Rectangle(1, 2, 3, "5")
 
 # Test of Rectangle("1", 2) exists
 
