@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Base class for the full project"""
 import json
+import os
 
 
 class Base:
@@ -51,9 +52,22 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
+        """Return an instance with all attributes already set."""
         if cls.__name__ == "Rectangle":
-            new_inst = cls(1, 1)
+            dummy_inst = cls(1, 1)
         elif cls.__name__ == "Square":
-            new_inst = cls(1)
-        new_inst.update(**dictionary)
-        return new_inst
+            dummy_inst = cls(1)
+        dummy_inst.update(**dictionary)
+        return dummy_inst
+
+    @classmethod
+    def load_from_file(cls):
+        """Returns a list of instances."""
+        filename = f"{cls.__name__}.json"
+        if not os.path.exists(filename):
+            return []
+        else:
+            with open(filename, "r") as f:
+                json_data = f.read()
+                obj_dict = cls.from_json_string(json_data)
+                return [cls.create(**obj) for obj in obj_dict]
