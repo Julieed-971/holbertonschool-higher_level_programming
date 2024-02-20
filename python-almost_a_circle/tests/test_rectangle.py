@@ -22,6 +22,8 @@ class TestRectangle(unittest.TestCase):
         """Test the type of arguments passed to the class""" 
         with self.assertRaises(TypeError):
             Rectangle("1", 2)
+        with self.assertRaises(TypeError):
+            Rectangle(1, "2")
 
 # Test of Rectangle("1", 2) exists
 
