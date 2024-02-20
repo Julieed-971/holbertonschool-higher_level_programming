@@ -35,16 +35,21 @@ class TestRectangle(unittest.TestCase):
             Rectangle(1, 2, "3")
         with self.assertRaises(TypeError):
             Rectangle(1, 2, 3, "5")
-
-# Test of Rectangle("1", 2) exists
-
-# Test of Rectangle(1, "2") exists
-
-# Test of Rectangle(1, 2, "3") exists
-
-# Test of Rectangle(1, 2, 3, "4") exists
-
-# Test of Rectangle(1, 2, 3, 4, 5) exists
+    
+    def test_values(self):
+        """Test the values of arguments passed to the class"""
+        with self.assertRaises(ValueError):
+            Rectangle(-1, 2)
+        with self.assertRaises(ValueError):
+            Rectangle(1, -2)
+        with self.assertRaises(ValueError):
+            Rectangle(0, 2)
+        with self.assertRaises(ValueError):
+            Rectangle(1, 0)
+        with self.assertRaises(ValueError):
+            Rectangle(1, 2, -3)
+        with self.assertRaises(ValueError):
+            Rectangle(1, 2, 3, -4)
 
 # Test of Rectangle(-1, 2) exists
 
