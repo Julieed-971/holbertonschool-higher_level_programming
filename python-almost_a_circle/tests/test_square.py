@@ -113,14 +113,14 @@ class TestSquare(unittest.TestCase):
 
     def test_save_to_file_empty_list(self):
         filename = "Square.json"
-        Square.save_to_file([1])
+        Square.save_to_file([Square(1)])
         self.assertTrue(os.path.exists(filename))
         
         with open(filename, "r") as f:
             file_content = f.read()
-        self.assertEqual(file_content, "[1]")
+        self.assertEqual(file_content, '[{"id": 23, "x": 0, "size": 1, "y": 0}]')
         
-        os.remove(filename)    
+        os.remove(filename)  
     
     def test_load_from_file_file_does_not_exist(self):
         self.assertEqual(Square.load_from_file(), [])
