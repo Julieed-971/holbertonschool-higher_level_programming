@@ -103,6 +103,22 @@ class TestRectangle(unittest.TestCase):
     def test_save_to_file_with_none(self):
         self.assertIsNone(Rectangle.save_to_file(None))
         
+    def test_save_to_file_with_empty_list(self):
+        self.assertIsNone(Rectangle.save_to_file([]))
+    
+    def test_save_to_file_with_list_of_rectangle(self):
+        rectangle = Rectangle(1, 2)
+        self.assertIsNone(Rectangle.save_to_file([rectangle]))
+
+    def test_load_from_file_file_does_not_exist(self):
+        self.assertEqual(Rectangle.load_from_file(), [])
+
+    def test_load_from_file_file_exists(self):
+        Rectangle.save_to_file([Rectangle(1, 2)])
+        dict_output = Rectangle.load_from_file()
+        expected_output = [Rectangle(1, 2)]
+        self.assertNotEqual(str(dict_output), str(expected_output))
+        
 # Test of update() in Rectangle exists
 
 # Test of update(89) in Rectangle exists
