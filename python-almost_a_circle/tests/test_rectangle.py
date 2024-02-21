@@ -5,6 +5,7 @@ import unittest
 import json
 import sys
 import os
+import io
 
 from models.base import Base
 from models.rectangle import Rectangle
@@ -61,14 +62,14 @@ class TestRectangle(unittest.TestCase):
 
     def test_display(self):
         rectangle = Rectangle(2, 3)
-        self.assertEqual(rectangle.width, 2)
-        self.assertEqual(rectangle.height, 3)
+        actual_output = io.StringIO()
+        sys.stdout = actual_output
+        rectangle.display()
+        printed_output = actual_output.getvalue()
+        sys.stdout = sys.__stdout__
+        expected_output = "##\n##\n##\n"
+        self.assertEqual(printed_output, expected_output)
 
-        rectangle = Rectangle(2, 3, 2)
-        self.assertEqual(rectangle.width, 2)
-        self.assertEqual(rectangle.height, 3)
-        self.assertEqual(rectangle.x, 2)
-        
 # Test of display() without x and y exists
 
 # Test of display() without y exists
