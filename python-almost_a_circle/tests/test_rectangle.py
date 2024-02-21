@@ -100,7 +100,7 @@ class TestRectangle(unittest.TestCase):
         rectangle = Rectangle.create(**{'id': 89, 'width': 1})
         self.assertTrue(hasattr(rectangle, 'create'))
 
-    def test_save_to_file2(self):
+    def test_save_to_file_empty_list(self):
         """Test save_to_file([]) in Rectangle"""
         filename = "Rectangle.json"
 
