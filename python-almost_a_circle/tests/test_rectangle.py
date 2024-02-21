@@ -101,10 +101,22 @@ class TestRectangle(unittest.TestCase):
         self.assertTrue(hasattr(rectangle, 'create'))
         
     def test_save_to_file_with_none(self):
-        self.assertIsNone(Rectangle.save_to_file(None))
+        Rectangle.save_to_file(None)
         
-    def test_save_to_file_with_empty_list(self):
-        self.assertIsNone(Rectangle.save_to_file([]))
+        with open("Rectangle.json", "r") as f:
+            dict_output = json.load(f)
+        
+        expected_output = []
+        self.assertEqual(dict_output, expected_output)
+        
+    def test_save_to_file_empty_list(self):
+        Rectangle.save_to_file([])
+        
+        with open("Rectangle.json", "r") as f:
+            dict_output = json.load(f)
+        
+        expected_output = []
+        self.assertEqual(dict_output, expected_output)
     
     def test_save_to_file_with_list_of_rectangle(self):
         rectangle = Rectangle(1, 2)
