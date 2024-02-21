@@ -109,8 +109,7 @@ class TestRectangle(unittest.TestCase):
         
         with open(filename, "r") as f:
             file_content = f.read()
-
-        self.assertEqual(file_content, "[]")
+            self.assertEqual(file_content, "[]")
         
         os.remove(filename)
 
