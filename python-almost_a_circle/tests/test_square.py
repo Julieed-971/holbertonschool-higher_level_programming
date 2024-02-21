@@ -120,6 +120,8 @@ class TestSquare(unittest.TestCase):
         expected_output = [Square(1, 2)]
         self.assertNotEqual(str(dict_output), str(expected_output))
 
+if __name__ == "__main__":
+    unittest.main()
 # Test of Square(1) exists
 
 # Test of Square(1, 2) exists
