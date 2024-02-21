@@ -110,6 +110,17 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(file_content, "[]")
         
         os.remove(filename)
+
+    def test_save_to_file_empty_list(self):
+        filename = "Square.json"
+        Square.save_to_file([1])
+        self.assertTrue(os.path.exists(filename))
+        
+        with open(filename, "r") as f:
+            file_content = f.read()
+        self.assertEqual(file_content, "[1]")
+        
+        os.remove(filename)    
     
     def test_load_from_file_file_does_not_exist(self):
         self.assertEqual(Square.load_from_file(), [])
@@ -122,64 +133,3 @@ class TestSquare(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-# Test of Square(1) exists
-
-# Test of Square(1, 2) exists
-
-# Test of Square(1, 2, 3) exists
-
-# Test of Square("1") exists
-
-# Test of Square(1, "2") exists
-
-# Test of Square(1, 2, "3") exists
-
-# Test of Square(1, 2, 3, 4) exists
-
-# Test of Square(-1) exists
-
-# Test of Square(1, -2) exists
-
-# Test of Square(1, 2, -3) exists
-
-# Test of Square(0) exists
-
-# Test of __str__() for Square exists
-
-# Test of to_dictionary() in Square exists
-
-# Test of update() in Square exists
-
-# Test of update(89) in Square exists
-
-# Test of update(89, 1) in Square exists
-
-# Test of update(89, 1, 2) in Square exists
-
-# Test of update(89, 1, 2, 3) in Square exists
-
-# Test of update(**{ 'id': 89 }) in Square exists
-
-# Test of update(**{ 'id': 89, 'size': 1 }) in Square exists
-
-# Test of update(**{ 'id': 89, 'size': 1, 'x': 2 }) in Square exists
-
-# Test of update(**{ 'id': 89, 'size': 1, 'x': 2, 'y': 3 }) in Square exists
-
-# Test of Square.create(**{ 'id': 89 }) in Square exists
-
-# Test of Square.create(**{ 'id': 89, 'size': 1 }) in Square exists
-
-# Test of Square.create(**{ 'id': 89, 'size': 1, 'x': 2 }) in Square exists
-
-# Test of Square.create(**{ 'id': 89, 'size': 1, 'x': 2, 'y': 3 }) in Square exists
-
-# Test of Square.save_to_file(None) in Square exists
-
-# Test of Square.save_to_file([]) in Square exists
-
-# Test of Square.save_to_file([Square(1)]) in Square exists
-
-# Test of Square.load_from_file() when file doesn’t exist exists
-
-# Test of Square.load_from_file() when file exists exists
