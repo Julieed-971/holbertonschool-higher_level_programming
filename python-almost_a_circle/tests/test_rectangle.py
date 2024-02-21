@@ -69,6 +69,15 @@ class TestRectangle(unittest.TestCase):
         sys.stdout = sys.__stdout__
         expected_output = "##\n##\n##\n"
         self.assertEqual(printed_output, expected_output)
+        
+        rectangle = Rectangle(2, 3, 1, 1)
+        actual_output = io.StringIO()
+        sys.stdout = actual_output
+        rectangle.display()
+        printed_output = actual_output.getvalue()
+        sys.stdout = sys.__stdout__
+        expected_output = "\n ##\n ##\n ##\n"
+        self.assertEqual(printed_output, expected_output)
 
 # Test of display() without x and y exists
 
