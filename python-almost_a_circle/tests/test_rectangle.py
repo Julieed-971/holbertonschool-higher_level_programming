@@ -122,7 +122,18 @@ class TestRectangle(unittest.TestCase):
         self.assertGreater(file_size, 0)
         
         os.remove(filename)
+    
+    def test_save_to_file_empty_list(self):
+        filename = "Rectangle.json"
+        Rectangle.save_to_file([])
+        self.assertTrue(os.path.exists(filename))
         
+        with open(filename, "r") as f:
+            file_content = f.read()
+        self.assertEqual(file_content, "[]")
+        
+        os.remove(filename)
+    
     def test_save_to_file_with_list_of_rectangle(self):
         filename = "Rectangle.json"
         rectangle = Rectangle(1, 2)
