@@ -79,13 +79,22 @@ class TestRectangle(unittest.TestCase):
         expected_output = "\n ##\n ##\n ##\n"
         self.assertEqual(printed_output, expected_output)
 
-# Test of display() without x and y exists
+    def test_to_dictionary(self):
+        rectangle = Rectangle(3, 4, 1, 2, 5)
+        self.assertEqual(rectangle.to_dictionary(), {'x': 1, 'y': 2, 'id': 5, 'width': 3, 'height': 4})
 
-# Test of display() without y exists
+    def test_update(self):
+        rectangle = Rectangle(1, 2)
+        rectangle.update(2, 3, 4, 5, 6)
+        self.assertEqual(rectangle.id, 2)
+        self.assertEqual(rectangle.width, 3)
+        self.assertEqual(rectangle.height, 4)
+        self.assertEqual(rectangle.x, 5)
+        self.assertEqual(rectangle.y, 6)
 
-# Test of display() exists
-
-# Test of to_dictionary() in Rectangle exists
+    def test_update_method_exists(self):
+        rectangle = Rectangle(1, 2)
+        self.assertTrue(hasattr(rectangle, 'update'))
 
 # Test of update() in Rectangle exists
 
