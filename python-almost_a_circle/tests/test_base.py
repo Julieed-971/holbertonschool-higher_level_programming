@@ -56,3 +56,6 @@ class TestBase(unittest.TestCase):
         """Check if method returns a list containing a single object."""
         base = Base.from_json_string('[{"id": 89}]')
         self.assertEqual(base, [{"id": 89}]) 
+
+if __name__ == "__main__":
+    unittest.main()
