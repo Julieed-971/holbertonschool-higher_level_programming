@@ -96,6 +96,10 @@ class TestRectangle(unittest.TestCase):
         rectangle = Rectangle(1, 2)
         self.assertTrue(hasattr(rectangle, 'update'))
 
+    def test_create_method_exists(self):
+        rectangle = Rectangle.create(**{'id': 89, 'width': 1})
+        self.assertTrue(hasattr(rectangle, 'create'))
+        
 # Test of update() in Rectangle exists
 
 # Test of update(89) in Rectangle exists
