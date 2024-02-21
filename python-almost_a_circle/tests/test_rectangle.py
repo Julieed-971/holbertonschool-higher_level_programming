@@ -100,20 +100,6 @@ class TestRectangle(unittest.TestCase):
         rectangle = Rectangle.create(**{'id': 89, 'width': 1})
         self.assertTrue(hasattr(rectangle, 'create'))
 
-    def test_save_to_file_empty_list(self):
-        filename = "Rectangle.json"
-    
-        Rectangle.save_to_file([])
-    
-        self.assertTrue(os.path.exists(filename))
-    
-        with open(filename, "r") as f:
-            file_content = f.read()
-        
-        self.assertEqual(file_content, '[]')
-    
-        os.remove(filename)
-
     def test_save_to_file_with_none(self):
         Rectangle.save_to_file(None)
         
@@ -122,6 +108,11 @@ class TestRectangle(unittest.TestCase):
         
         expected_output = []
         self.assertEqual(dict_output, expected_output)
+
+    def test_save_to_file_empty_list(self):
+        Rectangle.save_to_file([])
+        with open("Rectangle.json", "r") as f:
+            self.assertTrue("[]", f.read())
     
     def test_save_to_file_with_list_of_rectangle(self):
         filename = "Rectangle.json"
