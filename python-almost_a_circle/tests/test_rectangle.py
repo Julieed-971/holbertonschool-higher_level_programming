@@ -114,11 +114,13 @@ class TestRectangle(unittest.TestCase):
         Rectangle.save_to_file([])
         self.assertTrue(os.path.exists(filename))
         
-        # Check if the file size is greater than 0
+        with open(filename, "r") as f:
+            file_content = f.read()
+            print("File content:", file_content)
+        
         file_size = os.path.getsize(filename)
         self.assertGreater(file_size, 0)
         
-        # Clean up: remove the file after testing
         os.remove(filename)
         
     def test_save_to_file_with_list_of_rectangle(self):
