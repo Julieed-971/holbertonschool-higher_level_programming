@@ -111,19 +111,29 @@ class TestRectangle(unittest.TestCase):
         
     def test_save_to_file_empty_list(self):
         filename = "Rectangle.json"
+        
         Rectangle.save_to_file([])
         self.assertTrue(os.path.exists(filename))
         
         with open(filename, "r") as f:
-            file_content = f.read()
+            f_content = f.read()
 
-        self.assertEqual(file_content, "[]")
+        self.assertEqual(f_content, "[]")
         
         os.remove(filename)
         
     def test_save_to_file_with_list_of_rectangle(self):
+        filename = "Rectangle.json"
         rectangle = Rectangle(1, 2)
-        self.assertIsNone(Rectangle.save_to_file([rectangle]))
+        Rectangle.save_to_file([rectangle])
+        loaded_rectangles = Rectangle.load_from_file()
+        self.assertEqual(len(loaded_rectangles), 1)
+        loaded_rectangle = loaded_rectangles[0]
+        self.assertEqual(loaded_rectangle.width, rectangle.width)
+        self.assertEqual(loaded_rectangle.height, rectangle.height)
+        self.assertEqual(loaded_rectangle.x, rectangle.x)
+        self.assertEqual(loaded_rectangle.y, rectangle.y)
+        self.assertEqual(loaded_rectangle.id, rectangle.id)
 
     def test_load_from_file_file_does_not_exist(self):
         self.assertEqual(Rectangle.load_from_file(), [])
