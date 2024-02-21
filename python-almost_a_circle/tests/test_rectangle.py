@@ -123,7 +123,7 @@ class TestRectangle(unittest.TestCase):
         self.assertTrue(os.path.exists(filename))
         with open(filename, "r") as f:
             file_content = f.read()
-        self.assertEqual(file_content, '[]')
+            self.assertEqual(file_content, '[]')
         os.remove(filename)  
     
     def test_save_to_file_with_list_of_rectangle(self):
