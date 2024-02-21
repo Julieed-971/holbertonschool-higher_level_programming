@@ -105,11 +105,12 @@ class TestRectangle(unittest.TestCase):
     
         Rectangle.save_to_file([])
     
-        self.assertTrue(os.path.exists(filename), f"File '{filename}' does not exist")
+        self.assertTrue(os.path.exists(filename))
     
         with open(filename, "r") as f:
             file_content = f.read()
-            self.assertEqual(file_content, "[]", f"File content '{file_content}' does not match expected '[]'")
+        
+        self.assertEqual(file_content, "[]")
     
         os.remove(filename)
 
