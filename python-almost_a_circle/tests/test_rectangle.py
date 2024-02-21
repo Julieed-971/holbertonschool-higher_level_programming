@@ -59,10 +59,16 @@ class TestRectangle(unittest.TestCase):
         rectangle = Rectangle(3, 4, 1, 2, 5)
         self.assertEqual(str(rectangle), "[Rectangle] (5) 1/2 - 3/4")
 
-# Test of area() exists
+    def test_display(self):
+        rectangle = Rectangle(2, 3)
+        self.assertEqual(rectangle.width, 2)
+        self.assertEqual(rectangle.height, 3)
 
-# Test of __str__() for Rectangle exists
-
+        rectangle = Rectangle(2, 3, 2)
+        self.assertEqual(rectangle.width, 2)
+        self.assertEqual(rectangle.height, 3)
+        self.assertEqual(rectangle.x, 2)
+        
 # Test of display() without x and y exists
 
 # Test of display() without y exists
