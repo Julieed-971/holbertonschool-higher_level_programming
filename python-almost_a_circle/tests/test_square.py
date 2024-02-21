@@ -18,11 +18,20 @@ class TestSquare(unittest.TestCase):
         square = Square(1)
         self.assertEqual(square.size, 1)
         
-        square1 = Square(1, 2, 3, 4)
-        self.assertEqual(square1.size, 1)
-        self.assertEqual(square1.x, 2)
-        self.assertEqual(square1.y, 3)
-        self.assertEqual(square1.id, 4)
+        square = Square(1, 2)
+        self.assertEqual(square.size, 1)
+        self.assertEqual(square.x, 2)
+        
+        square = Square(1, 2, 3)
+        self.assertEqual(square.size, 1)
+        self.assertEqual(square.x, 2)
+        self.assertEqual(square.y, 3)
+        
+        square = Square(1, 2, 3, 4)
+        self.assertEqual(square.size, 1)
+        self.assertEqual(square.x, 2)
+        self.assertEqual(square.y, 3)
+        self.assertEqual(square.id, 4)
         
     def test_types(self):
         """Test the type of arguments passed to the class""" 
