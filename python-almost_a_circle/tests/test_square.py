@@ -54,14 +54,17 @@ class TestSquare(unittest.TestCase):
             Square(0)
 
     def test_string_representation(self):
+        """Test the string representation of a rectangle"""
         square = Square(3, 4, 1, 2)
         self.assertEqual(str(square), "[Square] (2) 4/1 - 3")
 
     def test_to_dictionary(self):
+        """Test the dictionary representation of a square"""
         square = Square(3, 1, 2, 5)
         self.assertEqual(square.to_dictionary(), {'x': 1, 'y': 2, 'id': 5, 'size': 3})
 
     def test_update(self):
+        """Test when updating the value of a square"""
         square = Square(1, 2)
         square.update(2, 3, 4, 5)
         self.assertEqual(square.id, 2)
@@ -70,44 +73,45 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(square.y, 5)
 
     def test_update_method_exists(self):
+        """Test that the class possess an update method"""
         square = Square(1, 2)
         self.assertTrue(hasattr(square, 'update'))
 
     def test_create_method_exists(self):
+        """Test that the class possess a create method"""
         square = Square.create(**{'id': 89, 'size': 1})
         self.assertTrue(hasattr(square, 'create'))
         
     def test_save_to_file_with_none(self):
+        """Test if the save_to_file method works with a None argument"""
         Square.save_to_file(None)
-        
         with open("Square.json", "r") as f:
             dict_output = json.load(f)
-        
         expected_output = []
         self.assertEqual(dict_output, expected_output)
     
     def test_save_to_file_empty_list(self):
+        """Test if the save_to_file method works with an empty list"""
         Square.save_to_file([])
-        
         with open("Square.json", "r") as f:
-
             self.assertEqual(f.read(), "[]")
 
     def test_save_to_file_square_1(self):
+        """Test if the save_to_file method works with a square of size 1"""
         filename = "Square.json"
         Square.save_to_file([Square(1)])
         self.assertTrue(os.path.exists(filename))
-        
         with open(filename, "r") as f:
             file_content = f.read()
         self.assertEqual(file_content, '[{"id": 23, "x": 0, "size": 1, "y": 0}]')
-        
         os.remove(filename)  
     
     def test_load_from_file_file_does_not_exist(self):
+        """Test to load from a file that does not exist"""
         self.assertEqual(Square.load_from_file(), [])
 
     def test_load_from_file_file_exists(self):
+        """Test to load from a file that exists"""
         Square.save_to_file([Square(1, 2)])
         dict_output = Square.load_from_file()
         expected_output = [Square(1, 2)]
