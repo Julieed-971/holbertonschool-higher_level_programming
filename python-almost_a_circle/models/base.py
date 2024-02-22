@@ -89,8 +89,8 @@ class Base:
         win = turtle.Screen()
         win.title("Julie's amazing turtle")
         win.bgcolor("black")
-        win.setup(width=600, height=600, startx=600, starty=200)
-    
+        win.setup(width=1900, height=1000, startx=0, starty=0)
+
         # Main game loop
         for i in list_rectangles:
             franklin.penup()
@@ -110,5 +110,5 @@ class Base:
                 franklin.forward(i.size)
                 franklin.left(90)
                 franklin.forward(i.size)
-                franklin.left(90) 
+                franklin.left(90)
         win.exitonclick()
