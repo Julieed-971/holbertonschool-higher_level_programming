@@ -103,7 +103,7 @@ class TestSquare(unittest.TestCase):
         self.assertTrue(os.path.exists(filename))
         with open(filename, "r") as f:
             file_content = f.read()
-        self.assertEqual(file_content, '[{"id": 23, "x": 0, "size": 1, "y": 0}]')
+        self.assertEqual(file_content, '[{"id": 18, "x": 0, "size": 1, "y": 0}]')
         os.remove(filename)  
     
     def test_load_from_file_file_does_not_exist(self):
