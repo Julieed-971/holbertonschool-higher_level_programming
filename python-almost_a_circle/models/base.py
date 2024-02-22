@@ -2,6 +2,7 @@
 """Base class for the full project"""
 import json
 import os
+import turtle
 
 
 class Base:
@@ -71,3 +72,43 @@ class Base:
                 json_data = f.read()
                 obj_dict = cls.from_json_string(json_data)
                 return [cls.create(**obj) for obj in obj_dict]
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """Draws all the rectangles and squares with a turtle"""
+        # Create a turtle
+        franklin = turtle.Turtle()
+        # Set the turtle speed
+        franklin.speed(1)
+        # Set the shape
+        franklin.shape("turtle")
+        # Set the color
+        franklin.color("purple", "red")
+        franklin.turtlesize(3)
+        # Set up the screen
+        win = turtle.Screen()
+        win.title("Julie's amazing turtle")
+        win.bgcolor("black")
+        win.setup(width=600, height=600, startx=600, starty=200)
+    
+        # Main game loop
+        for i in list_rectangles:
+            franklin.penup()
+            franklin.goto(i.x, i.y)
+            franklin.pendown()
+            for _ in range(2):
+                franklin.forward(i.width)
+                franklin.left(90)
+                franklin.forward(i.height)
+                franklin.left(90)
+
+        for i in list_squares:
+            franklin.penup()
+            franklin.goto(i.x, i.y)
+            franklin.pendown()
+            for _ in range(2):
+                franklin.forward(i.size)
+                franklin.left(90)
+                franklin.forward(i.size)
+                franklin.left(90) 
+        win.exitonclick()
