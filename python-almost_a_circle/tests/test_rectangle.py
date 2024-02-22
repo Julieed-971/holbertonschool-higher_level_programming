@@ -148,5 +148,10 @@ class TestRectangle(unittest.TestCase):
         expected_output = [Rectangle(1, 2)]
         self.assertNotEqual(str(dict_output), str(expected_output))
 
+    def test_save_to_file_empty_list(self):
+        Rectangle.save_to_file([])
+        with open("Rectangle.json", "r") as f:
+            self.assertTrue("[]", f.read())
+
 if __name__ == "__main__":
     unittest.main()
