@@ -19,7 +19,8 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     # Execute SQL query
-    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%'")
+    cursor.execute("SELECT * FROM states WHERE\
+                   name LIKE 'N%' ORDER BY id ASC")
 
     # Print results in tuple format
     for row in cursor.fetchall():
