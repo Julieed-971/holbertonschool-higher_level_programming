@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
     # Execute SQL query
     cursor.execute("SELECT * FROM states WHERE\
-                   states.name LIKE 'N%' ORDER BY states.id ASC")
+                   states.name LIKE BINARY 'N%' ORDER BY states.id ASC")
 
     # Print results in tuple format
     for row in cursor.fetchall():
