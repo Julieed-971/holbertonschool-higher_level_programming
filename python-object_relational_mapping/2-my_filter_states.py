@@ -21,7 +21,8 @@ if __name__ == "__main__":
 
     # Execute SQL query
     cursor.execute("SELECT * FROM states WHERE states.name\
-                   = '{}' ORDER BY states.id ASC".format(state_name_srch))
+                   LIKE BINARY '{}' ORDER BY states.id ASC"
+                   .format(state_name_srch))
 
     # Print results in tuple format
     for row in cursor.fetchall():
