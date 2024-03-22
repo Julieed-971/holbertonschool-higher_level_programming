@@ -6,11 +6,6 @@ from sqlalchemy.ext.declarative import declarative_base
 import sys
 
 
-engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format
-                       (sys.argv[1], sys.argv[2], sys.argv[3]), echo=True)
-
-connection = engine.connect()
-
 Base = declarative_base()
 
 
