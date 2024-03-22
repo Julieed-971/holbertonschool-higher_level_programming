@@ -18,6 +18,6 @@ if __name__ == "__main__":
         State, State.id == City.state_id).order_by(asc(City.id)).all()
 
     for city, state in cities:
-        print("{} ({}) {}".format(state.name, city.id, city.name))
+        print("{}: ({}) {}".format(state.name, city.id, city.name))
 
     session.close()
