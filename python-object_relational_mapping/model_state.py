@@ -7,7 +7,7 @@ import sys
 
 
 engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format
-	(sys.argv[1], sys.argv[2], sys.argv[3]), echo=True)
+                       (sys.argv[1], sys.argv[2], sys.argv[3]), echo=True)
 
 connection = engine.connect()
 
@@ -16,5 +16,6 @@ Base = declarative_base()
 
 class State(Base):
     __tablename__ = 'states'
-    id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
+    id = Column(Integer, unique=True, primary_key=True,
+                autoincrement=True, nullable=False)
     name = Column(String(128), nullable=False)
